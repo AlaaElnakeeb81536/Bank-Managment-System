@@ -1,9 +1,10 @@
-                     //BANK MANAGMENT PROJECT
+                                                            //BANK MANAGMENT PROJECT
 
 #include <iostream>
 #include <stdio.h>
 #include <conio.h>
 using namespace std;
+
 class bank
 {
 char name[100],add[100],y;
@@ -14,6 +15,7 @@ public:
     void withdraw_money();
     void display_account();
 };
+
 void bank::open_account()
 {
     cout<<"Enter your full name :: ";
@@ -28,6 +30,7 @@ void bank::open_account()
     cin>> balance;
     cout<<"your account is created \n ";
 }
+
 void bank :: deposite_money()
 {
     int a;
@@ -36,6 +39,7 @@ void bank :: deposite_money()
     balance+=a;
     cout<<"total amount you deposite :: \t "<<balance;
 }
+
 void bank :: display_account()
 {
     cout<< "your full name :: \t "<<name;
@@ -43,6 +47,7 @@ void bank :: display_account()
     cout<<"type of account that you open :: \t "<<y;
     cout<<"amount you deposite :: \t "<<balance;
 }
+
 void bank :: withdraw_money()
 {
     float amount ;
@@ -53,6 +58,7 @@ void bank :: withdraw_money()
     cout<<"now total amount is left :: "<<balance;
 
 }
+
 int main()
 {
     int ch,x;
@@ -66,6 +72,7 @@ int main()
     cout<<"5) Exit \n";
     cout<<"select the option from above \n";
     cin>>ch;
+      
     switch(ch)
     {
         case 1:
@@ -98,11 +105,15 @@ int main()
             cout<<"this is not exist try again \n ";
 
     }
+      
     cout<<"\n do you want to select next option then press :: y \n";
+      
     cout<<"if you want to exit then press :: N ";
+      
     x=getch();
     if(x=='n'||x=='N')
         exit(0);
-    }while(x=='y'||x=='Y');
+    } while(x=='y'||x=='Y');
+  
     return 0;
 }
